@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Science Department</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(145deg, #1f6feb, #0d1117);
+      text-align: center;
+      padding: 20px 0;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+
+    #hero {
+      background: url('images/collegebuilding.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: #58a6ff;
+      animation: fadeIn 2s ease-out;
+      position: relative;
+      background-blur: 20px;
+    }
+
+    #hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+
+    #hero h1 {
+      font-size: 4rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+    }
+
+    #hero p {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      font-weight: 300;
+    }
+
+    #hero button {
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      color: #fff;
+      background: #1f6feb;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    #hero button:hover {
+      background: #3ea6ff;
+      transform: scale(1.1);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    h2 {
+      color: #58a6ff;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    #about p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    #semesters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .semester {
+      background: #161b22;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .semester:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    .semester h3 {
+      color: #1f6feb;
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .semester ul {
+      color: #c9d1d9;
+    }
+
+    #faculty {
+      background: #0d1117;
+      padding: 40px 20px;
+    }
+
+    .faculty-card {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background: #161b22;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faculty-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .faculty-card img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+
+    .faculty-card h3 {
+      color: #1f6feb;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .faculty-card p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+    }
+
+    /* Keyframe Animation for Hero */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 3rem;
+      }
+
+      #hero p {
+        font-size: 1.2rem;
+      }
+
+      .faculty-card img {
+        width: 70px;
+        height: 70px;
+      }
+
+      .semester h3 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Computer Science Department</h1>
+    <p>Innovating the Future Through Technology</p>
+  </header>
+
+  <section id="hero">
+    <h1>Welcome to CS Department</h1>
+    <p>Discover, Innovate, and Lead in the World of Technology</p>
+    <button>Explore More</button>
+  </section>
+
+  <section id="about">
+    <h2>About the Course</h2>
+    <p>Computer Science explores the theory, development, and applications of computational systems. From AI to Cybersecurity, we prepare you for the ever-evolving tech world.</p>
+  </section>
+
+  <section id="semesters">
+    <h2>Semester Details</h2>
+    <div class="semester">
+      <h3>Semester 1</h3>
+      <ul>
+        <li>Introduction to Programming</li>
+        <li>Mathematics for Computing</li>
+        <li>Computer Organization</li>
+      </ul>
+    </div>
+    <div class="semester">
+      <h3>Semester 2</h3>
+      <ul>
+        <li>Data Structures</li>
+        <li>Object-Oriented Programming</li>
+        <li>Digital Logic Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faculty">
+    <h2>Meet Our Faculty</h2>
+    <div class="faculty-card">
+      <img src="images/prof-alex.jpg" alt="Prof. Alex">
+      <div>
+        <h3>Prof. Alex</h3>
+        <p>Specialization: Artificial Intelligence</p>
+      </div>
+    </div>
+    <div class="faculty-card">
+      <img src="images/prof-mary.jpg" alt="Prof. Mary">
+      <div>
+        <h3>Prof. Mary</h3>
+        <p>Specialization: Data Science</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

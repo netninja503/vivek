@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>East West College Homepage</title>
+  <!-- Fonts and Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      width: 100%;
+      background: linear-gradient(90deg, #0052cc, #1e90ff);
+      padding: 10px 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 24px;
+    }
+
+    header nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    header nav ul li {
+      margin-left: 20px;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      font-size: 16px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    header nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Hero Section */
+    #hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('images/collegebuiding.jpg') no-repeat center center/cover;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    #hero p {
+      max-width: 600px;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      animation: fadeUp 2s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    hero {
+      background-image: url('images/collegebuilding.jpg');
+      animation: changeImage 10s infinite;
+    }
+
+    @keyframes changeImage {
+      0% {
+        background-image: url('images/collegebuilding.jpg');
+      }
+      50% {
+        background-image: url('images/p2.png');
+      }
+      100% {
+        background-image: url('images/p3.png');
+      }
+    }
+
+    /* About Us */
+    #about {
+      padding: 40px 20px;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    #about h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #0052cc;
+    }
+
+    #about p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Departments Section */
+    #departments {
+      padding: 40px 20px;
+      background: #f9f9f9;
+    }
+
+    #departments h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px;
+      font-size: 1.5rem;
+      color: #0052cc;
+    }
+
+    .card p {
+      margin: 0 15px 15px;
+      color: #555;
+    }
+
+    .card a {
+      color: #0052cc;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .card a:hover {
+      color: #1e90ff;
+    }
+
+    /* Apply Now Section */
+    #apply-now {
+      padding: 40px 20px;
+      background: #f4f4f4;
+    }
+
+    #apply-now h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    #apply-now form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #apply-now form div {
+      margin-bottom: 15px;
+    }
+
+    #apply-now form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    #apply-now form input,
+    #apply-now form select,
+    #apply-now form button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #apply-now form button {
+      background: #0052cc;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease-in-out;
+    }
+
+    #apply-now form button:hover {
+      background: #1e90ff;
+    }
+
+    /* Confirmation Message */
+    #confirmation {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1>East West  College</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#apply-now">Apply Now</a></li>
+          <li><a href="founder.html">Founder</a></li>
+          <li><a href="principal.html">Principal</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Welcome to East West Polytechnic</h1>
+    <p>Shaping the future of education through innovation, commitment, and excellence.</p>
+  </section>
+  
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Dynamic College is dedicated to providing world-class education and shaping the leaders of tomorrow through innovation and excellence.</p>
+  </section>
+
+  <!-- Departments -->
+  <section id="departments">
+    <h2>Our Departments</h2>
+    <div class="cards-container">
+      <div class="card">
+        <img src="images/computerscience.jpg" alt="Computer Science">
+        <h3><a href="department-cs.html">Computer Science</a></h3>
+        <p>Explore cutting-edge technologies and shape the future of computing.</p>
+      </div>
+      <div class="card">
+        <img src="images/mech.jpg" alt="Mechanical Engineering">
+        <h3><a href="department-me.html">Mechanical Engineering</a></h3>
+        <p>Design and build innovative mechanical systems.</p>
+      </div>
+      <div class="card">
+        <img src="images/elec.jpg" alt="Electrical Engineering">
+        <h3><a href="department-eee.html">Electrical Engineering</a></h3>
+        <p>Master the power of electricity and its applications.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Apply Now -->
+  <section id="apply-now">
+    <h2>Apply Now</h2>
+    <form id="applicationForm" action="https://formspree.io/f/mgvvelyg" method="POST">
+      <div>
+        <label for="studentName">Student Name</label>
+        <input type="text" id="studentName" name="studentName" required>
+      </div>
+      <div>
+        <label for="fatherName">Father's Name</label>
+        <input type="text" id="fatherName" name="fatherName" required>
+      </div>
+      <div>
+        <label for="motherName">Mother's Name</label>
+        <input type="text" id="motherName" name="motherName" required>
+      </div>
+      <div>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+      <div>
+        <label for="course">Select Course</label>
+        <select id="course" name="course" required>
+          <option value="">--Select--</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Mechanical Engineering">Mechanical Engineering</option>
+          <option value="Electrical Engineering">Electrical Engineering</option>
+        </select>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="confirmation" style="display:none;">Thank you for applying. Your application has been submitted!</div>
+  </section>
+
+
+  ...
+<script>
+  const images = [
+    'images/collegebuilding.jpg',
+    'images/p2.png',
+    'images/p3.png'
+  ];
+
+  let currentIndex = 0;
+
+  function changeImage() {
+    const heroSection = document.getElementById('hero');
+    currentIndex = (currentIndex + 1) % images.length;
+    heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${images[currentIndex]})`;
+  }
+
+  setInterval(changeImage, 4000); // Change image every 5 seconds
+</script>
+
+
+
+</body>
+</html>
